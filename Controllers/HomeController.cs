@@ -52,9 +52,16 @@ namespace ActionToViewEx.Controllers
 
         public IActionResult GetModel()
         {
-            //Emp e = new Emp();
-            Product p = new Product();
-            return View(p);
+            Emp e = new Emp();
+            return View(e);
+        }
+
+        public IActionResult GetProducts()
+        {
+         //   Product p = new Product();
+          //  return View(p);
+            var v = Product.GetProducts();
+           return View(v);
         }
     }
 }

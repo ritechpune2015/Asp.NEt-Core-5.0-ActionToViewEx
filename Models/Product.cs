@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ActionToViewEx.Models
 {
@@ -9,12 +10,13 @@ namespace ActionToViewEx.Models
         public string MfgName { get; set; }
         public decimal Price { get; set; }
 
-        public Product()
+        public static List<Product> GetProducts()
         {
-            this.ProductID = 123;
-            this.ProductName = "Mouse";
-            this.MfgName = "Logitech";
-            this.Price = 5500;
+            List<Product> lst = new List<Product>() { 
+              new Product() {ProductID=1,ProductName="Mouse",MfgName="Intex",Price=450}
+            };
+
+            return lst;
         }
     }
 }
